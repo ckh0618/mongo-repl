@@ -1,0 +1,9 @@
+FROM golang 
+
+WORKDIR /app
+
+RUN apt update && apt install -y iputils-ping wget 
+RUN wget https://downloads.mongodb.com/compass/mongodb-mongosh_2.3.4_arm64.deb && dpkg -i mongodb-mongosh_2.3.4_arm64.deb
+COPY * /app/
+RUN cd /app && go build 
+CMD ["/app/sample_app"]

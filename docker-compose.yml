@@ -38,7 +38,7 @@ services:
       context: .
       dockerfile : app/dockerfile
     environment:
-      - MONGODB_URI=mongodb://app:app@mongo1:27017,mongo2:27017,mongo3:27017/admin?repliaSet=rs0&maxIdleTimeMS=6000000&minPoolSize=10
+      - MONGODB_URI=mongodb://app:app@mongo1:27017,mongo2:27017,mongo3:27017/admin?repliaSet=rs0
     
     
 volumes:
